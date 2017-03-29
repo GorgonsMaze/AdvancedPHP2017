@@ -28,7 +28,7 @@
 
         if (isPostRequest()) {
 
-            if ( !preg_match($phoneRegex, $phone) ) {
+            if (phoneIsValid($phone)=== false) {
                 $errors[] = 'Sorry Phone is not valid';
             }
             
@@ -48,6 +48,7 @@
             
         }
 
+        $phones = getAllPhone();
 
         include './templates/errors.html.php';
         include './templates/messages.html.php';

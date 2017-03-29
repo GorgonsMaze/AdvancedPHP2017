@@ -31,7 +31,7 @@
                 $errors[] = 'Full name is required.';
             }
             
-            if (filter_var($email, FILTER_VALIDATE_EMAIL)== false ) {
+            if (filter_var($email, FILTER_VALIDATE_EMAIL)=== false ) {
                 $errors[] = 'Email is not valid.';
             }
             

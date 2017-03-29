@@ -6,7 +6,6 @@
     </head>
     <body>
         <?php
-        // put your code here
         
         $dob = filter_input(INPUT_POST, 'dob');        
         ?>
