@@ -2,14 +2,18 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Add Address</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.min.css">
+        <link rel='stylesheet' type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     </head>
     <body>
         <?php
         require_once '../lab/models/dbconnect.php';
         require_once '../lab/models/addressCRUD.php';
-        include './models/validation.php';
         require_once '../lab/models/util.php';
+        include './templates/navigation.html.php';
+        include './models/validation.php';
         
         $fullname = filter_input(INPUT_POST, 'fullname');
         $email = filter_input(INPUT_POST, 'email');
@@ -77,5 +81,19 @@
         include './templates/messages.html.php';
         include '../lab/templates/add-address.html.php';
         ?>
+        
+        <script type="text/javascript">
+            
+            // Method to allow user to x out of success alert
+            function deleteAlert() {                
+                if (document.getElementById('successAlert').style.display === 'none') {
+                    document.getElementById('successAlert').style.display = 'block';
+                } else {
+                    document.getElementById('successAlert').style.display = 'none';
+                }
+            }
+            
+        </script>
+        
     </body>
 </html>

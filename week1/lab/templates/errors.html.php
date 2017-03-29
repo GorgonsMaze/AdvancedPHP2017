@@ -1,7 +1,11 @@
 <?php if ( isset($errors) && is_array($errors) ) : ?>
-<ul>
-    <?php foreach ($errors as $error): ?>
-        <li class="bg-danger"><?php echo $error; ?></li>
-    <?php endforeach; ?>
-</ul>
+<div class="columns">
+    <div class="column is-three-quarters is-offset-2"> 
+        <ul>
+            <?php foreach ($errors as $error): ?>
+            <span style="margin:10px 0;" class="tag is-danger bounceIn animated"><?php echo $error; ?></span>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+</div>
 <?php endif; ?>
