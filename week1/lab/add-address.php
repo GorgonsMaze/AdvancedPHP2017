@@ -8,6 +8,7 @@
         <?php
         require_once '../lab/models/dbconnect.php';
         require_once '../lab/models/addressCRUD.php';
+        include './models/validation.php';
         require_once '../lab/models/util.php';
         
         $fullname = filter_input(INPUT_POST, 'fullname');
@@ -20,14 +21,60 @@
         
         // Initialize errors array
         $errors = [];
+        $states = getStates();
+        
+        $zipRegex = '/^[0-9]{5}$/';
         
         // Validation
         if ( isPostRequest() ) {
             if ( empty($fullname) ){
                 $errors[] = 'Full name is required.';
             }
+            
+            if (filter_var($email, FILTER_VALIDATE_EMAIL)== false ) {
+                $errors[] = 'Email is not valid.';
+            }
+            
+            if ( empty($addressline1) ){
+                $errors[] = 'Address Line 1 is required.';
+            }
+            
+            if ( empty($city) ){
+                $errors[] = 'City is required.';
+            }
+            
+            if ( isZipValid($zip)=== false ) {
+                $errors[] = 'Zip is required.';
+            }
+            
+            if ( empty($state) ) {
+                $errors[] = 'State needs to be selected.';
+            }
+            
+            if (isDateValid($birthday)=== false) {
+                $errors[] = 'Date is not valid.';
+            }
+            
+            if (count($errors) === 0) {
+                if (createAddress($fullname, $email, $addressline1, $city, $state, $zip, $birthday)) {
+                    $message = 'Address Added';
+                    $fullname = '';
+                    $email = '';
+                    $addressline1 = '';
+                    $city = '';
+                    $state = '';
+                    $zip = '';
+                    $birthday = '';
+                    
+                } else {
+                    $errors[] = 'Could not add to the database.';
+                }
+            }
         }
                 
+        
+        include './templates/errors.html.php';
+        include './templates/messages.html.php';
         include '../lab/templates/add-address.html.php';
         ?>
     </body>
