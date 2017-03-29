@@ -81,7 +81,10 @@
         include './templates/messages.html.php';
         include '../lab/templates/add-address.html.php';
         ?>
+        
         <script type="text/javascript">
+            
+            // Method to allow user to x out of success alert
             function deleteAlert() {                
                 if (document.getElementById('successAlert').style.display === 'none') {
                     document.getElementById('successAlert').style.display = 'block';
@@ -89,6 +92,8 @@
                     document.getElementById('successAlert').style.display = 'none';
                 }
             }
+            
         </script>
+        
     </body>
 </html>

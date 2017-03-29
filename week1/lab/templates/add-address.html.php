@@ -2,7 +2,7 @@
 <div class="columns is-desktop">
     <div class="column is-half is-offset-one-quarter">
         <h1 class="title is-2 has-text-centered">Add Address</h1>
-        <form action="#" method="post"> 
+        <form action="#" method="post" id="addressForm"> 
             <div class="field">
                 <label class="label">Full Name</label>
                 <input class="input" name="fullname" value="<?php echo $fullname; ?>" />
@@ -42,12 +42,12 @@
                 <input class="input" name="birthday" type="date" value="<?php echo $birthday; ?>" />
             </div>
 
-            <div class="field is-grouped">
+            <div class="field is-grouped has-addons has-addons-centered">
                 <p class="control">
                     <input class="button is-primary" type="submit" value="Submit" class="btn btn-primary" />
                 </p>
-                <p class="control">
-                    <button class="button is-link">Cancel</button>
+                <p class="control level">
+                    <button class="button is-small level-item" type="reset">Cancel</button>
                 </p>
             </div>
 
