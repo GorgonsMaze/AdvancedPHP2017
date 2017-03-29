@@ -1,7 +1,7 @@
 <?php if ( isset($errors) && is_array($errors) ) : ?>
 <ul>
     <?php foreach ($errors as $error): ?>
-        <li class="bg-danger"><?php echo $error; ?></li>
+        <span class="tag is-danger"><?php echo $error; ?></span>
     <?php endforeach; ?>
 </ul>
 <?php endif; ?>
