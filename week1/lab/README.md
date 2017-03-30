@@ -1,9 +1,9 @@
 # Lab 1 - Add/Get Addresses from DB
 
-###Instructions
+##  Instructions
 
-* Create a database called PHPAdvClassSpring2017. (You can do both the user and database creation all at the same time in phpmyadmin.)
-* In PHP MyAdmin under the PHPAdvClassSpring2017 database click on the SQL tab. There will be a text area where you can copy and paste the SQL for the Assignment.  Once pasted you may click go. The SQL will add the tables needed for your assignment.
+* Create a database called _PHPAdvClassSpring2017_. (You can do both the user and database creation all at the same time in phpmyadmin.)
+* In PHP MyAdmin under the _PHPAdvClassSpring2017_ database click on the SQL tab. There will be a text area where you can copy and paste the SQL for the Assignment.  Once pasted you may click go. The SQL will add the tables needed for your assignment.
 
 ```sql
 --
@@ -50,4 +50,3 @@ CREATE TABLE IF NOT EXISTS `address` (
 
 This requirement will be graded as part of your functional grade.
 Feel free to use the bootstrap CDN support to add the css and theme files.
-Go to http://getbootstrap.com/getting-started/ for more information
