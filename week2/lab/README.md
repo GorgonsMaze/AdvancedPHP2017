@@ -1,4 +1,4 @@
-# Lab 2 
+# Lab 2 - iMessage
 
 ## Part 1:
 1. Lets create a message class that will handle messages for our page.
@@ -8,9 +8,9 @@
 3. Create IMessage interface. (5 points)
 
 4. The interface should have the following methods(functions)
-  * addMessage($key, $msg)
-  * removeMessage($key)
-  * getAllMessages()
+ * addMessage($key, $msg)
+ * removeMessage($key)
+ * getAllMessages()
 
 5. Create a Message class that implements the IMessage interface. (10 points)
 
