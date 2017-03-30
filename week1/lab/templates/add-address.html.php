@@ -25,6 +25,7 @@
                 <p class="control">
                 <span class="select">
                 <select name="state">
+                    <option selected="true" disabled="disabled" value="">Please Select One...</option>
                     <?php foreach ($states as $key => $value): ?> 
                       <option value="<?php echo $key; ?>" <?php if ( $state == $key ): ?> selected="selected" <?php endif; ?>><?php echo $value; ?></option>
                     <?php endforeach; ?>
