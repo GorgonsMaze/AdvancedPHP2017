@@ -23,14 +23,14 @@
             <div class="field">
                 <label class="label">State</label>
                 <p class="control">
-                <span class="select">
-                <select name="state">
-                    <option selected="true" disabled="disabled" value="">Please Select One...</option>
-                    <?php foreach ($states as $key => $value): ?> 
-                      <option value="<?php echo $key; ?>" <?php if ( $state == $key ): ?> selected="selected" <?php endif; ?>><?php echo $value; ?></option>
-                    <?php endforeach; ?>
-                </select>
-                </span>
+                    <span class="select is-fullwidth">
+                        <select name="state">
+                            <option selected="true" disabled="disabled" value="">Please Select One...</option>
+                            <?php foreach ($states as $key => $value): ?> 
+                                <option value="<?php echo $key; ?>" <?php if ($state == $key): ?> selected="selected" <?php endif; ?>><?php echo $value; ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </span>
                 </p>
             </div>
 
