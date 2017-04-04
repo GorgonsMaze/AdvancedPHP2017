@@ -17,7 +17,7 @@ function isPostRequest() {
 function phoneIsValid($phone){
     $phoneRegex = '/^\(?([2-9]{1}[0-9]{2})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/';
     
-    if ( !preg_match($phoneRegex, $phone) ) {
+    if ( preg_match($phoneRegex, $phone) ) {
         return true;
     }
     
