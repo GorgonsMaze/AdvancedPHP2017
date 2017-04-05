@@ -10,12 +10,12 @@
         include './IShapes.php';
         include './Square.php';
         include './Triangle.php';
-        
+
         $square = new Square();
         $triangle = new Triangle();
-        
+
         //var_dump($square);
-        
+
         /*
          * $square is a instance of the class Square but not of Triangle
          * 
@@ -24,8 +24,7 @@
          */
         var_dump($square instanceof IShapes);
         var_dump($triangle instanceof IShapes);
-        
-        
+        var_dump($triangle instanceof $square);
         
         ?>
     </body>
