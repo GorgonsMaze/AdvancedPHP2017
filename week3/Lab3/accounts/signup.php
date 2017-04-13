@@ -29,9 +29,13 @@
 
             // If email is invalid throw error
             if ($validator->isEmailValid($email) === false) {
-                $errors[] = 'Email is not valid.';
+                $errors[] = 'Email is not valid';
             }
 
+            if ($accounts->isEmailRegistered($email)) {
+                $errors[] = 'Email is already registered';
+            }
+            
             if (count($errors) === 0) {
                 if ($accounts->signup($email, $password)) {
                     //echo "Signup worked!";

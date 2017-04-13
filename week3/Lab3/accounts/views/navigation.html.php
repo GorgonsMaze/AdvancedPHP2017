@@ -27,11 +27,18 @@
             </span>
             <span>Login</span>
         </a>
-          <a class="button is-warning" href="../accounts/login.php">
+        <a class="button is-warning" href="../accounts/login.php">
             <span class="icon">
                 <i class="fa fa-sign-out" aria-hidden="true"></i>
             </span>
             <span>Logout</span>
+        </a>
+
+        <a class="button is-info" href="../accounts/admin.php">
+            <span class="icon">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+            </span>
+            <span>Admin</span>
         </a>
     </span>
 </div>

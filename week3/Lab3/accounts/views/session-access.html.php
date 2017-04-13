@@ -1,7 +1,12 @@
-<?php
+<div class="columns">
+    <div class="column is-4 is-offset-4 has-text-centered">
+        <?php
+        session_start();
 
-session_start();
+        if (!isset($_SESSION['user_id']) || $_SESSION['user_id'] <= 0) {
+            exit("<div class='notification is-danger'>You are not allowed here!\nPlease <a class='button is-small' href='./login.php'>login</a></div>");
+        }
+        ?>
 
-if (!isset($_SESSION['user_id']) || $_SESSION['user_id'] <= 0) {
-    exit("You are not allowed here!");
-}
+    </div>
+</div>
