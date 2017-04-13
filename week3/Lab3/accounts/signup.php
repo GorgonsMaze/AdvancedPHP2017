@@ -9,7 +9,8 @@
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
     </head>
     <body>
-        <?php
+        <?php 
+        session_start();
         include './autoload.php';
 
         include './views/navigation.html.php';

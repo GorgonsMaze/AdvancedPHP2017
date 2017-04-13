@@ -10,15 +10,35 @@
     </head>
     <body>
         <?php
+        session_start();
         include './autoload.php';
 
         include './views/navigation.html.php';
         include './views/session-access.html.php';
 
-        // TODO display user id and email
+        $util = new Util();
+        $accounts = new Accounts();
+
+        // Get ther user id to display
+        $userid = $_SESSION['user_id'];
+
+        // Gets the email to display
+        $email = $accounts->getUserEmail($_SESSION['user_id']);
+
+
+        $name = explode("@", $email);
+
         // when user logsout - redirect user to login page
-        // unset the session user id when logging out
+        // unset the session user id when logging out        
+        if ($util->isPostRequest()) {
+            unset($_SESSION['user_id']);
+            $util->redirect("login.php");
+        }
+        
+        include './views/admin.html.php';
         ?>
-        <h1 class="title is-2 has-text-centered">Admin Page</h1>
+        
+        
+    
     </body>
 </html>
