@@ -20,6 +20,7 @@ class Accounts extends DB {
     }
 
     /**
+     *  Method to create an account/signup
      * 
      * @param type $email
      * @param type $password
