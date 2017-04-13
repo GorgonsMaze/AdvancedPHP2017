@@ -1,0 +1,13 @@
+/* Style - Lab 1 */
+
+.tag {
+    margin:10px 0;
+}
+
+a .login {
+    color: #e2ff00!important;
+}
+
+p small .id-display {
+    padding-right:.5em;
+}
