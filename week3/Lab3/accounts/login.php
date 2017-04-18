@@ -38,6 +38,8 @@
                     //echo " you logged in!";
                     $_SESSION['user_id'] = $loginInfo;
                     $util->redirect("admin.php");
+                } else {
+                    $errors[] = "Email or Password is invalid";
                 }
             }
         }
