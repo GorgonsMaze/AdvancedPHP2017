@@ -15,7 +15,7 @@ $counter = 1;
                 <tr>
                     <th><?php echo $counter++; ?></th>
                     <td><?php echo$fileInfo->getFileName(); ?> </td>
-                    <td><a class="button is-default" href="">View</a></td>
+                    <td><a class="button is-default" href="file-read.php?filename=<?php echo $fileInfo->getFileName();?>">View</a></td>
                     <td><a class="button is-danger" href="">Delete</a></td>
                 </tr>
             <?php endif; ?>
