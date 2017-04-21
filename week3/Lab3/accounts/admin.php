@@ -11,6 +11,7 @@
     <body>
         <?php
         session_start();
+        session_regenerate_id();
         include './autoload.php';
 
         include './views/navigation.html.php';
