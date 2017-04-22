@@ -29,17 +29,19 @@
             }
         }
 
-
-
-
         include './views/errors.html.php';
         ?>
 
         <?php if (isset($fileName)) : ?>
-            <h2><?php echo $fileName; ?> is uploaded successfully.</h2>
-        <?php else: ?>
-            <p><?php echo $error; ?></p>
+            <div class="columns">
+                <div class="column is-4 is-offset-4"> 
+                    <ul>
+                        <span class="tag is-success bounceIn animated"><?php echo $fileName; ?> has uploaded successfully</span>
+                    </ul>
+                </div>
+            </div>
         <?php endif; ?>
+
 
     </body>
 </html>

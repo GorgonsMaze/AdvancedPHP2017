@@ -17,23 +17,7 @@
 
 
         $filehandler = new Filehandler();
-
-////        if(empty($_FILES)) {
-////            $errors = "Must select a file";
-////        }
-//        
-//        if(count($_FILES)) {
-//            
-//        }
-//        try {
-//            $fileName = $filehandler->upLoad('upfile');
-//        } catch (RuntimeException $e) {
-//            $error = $e->getMessage();
-//        }
         ?>
-
-
-     
     </body>
 </html>
 
