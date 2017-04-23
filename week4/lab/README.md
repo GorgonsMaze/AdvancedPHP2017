@@ -6,7 +6,8 @@ Create a page that will allow me to upload a new file. I should only be allowed 
 
 Make sure to add validation and let the user know why the file was not uploaded. Use exceptions. (10 points)
 
-Create a view page that will display all my files uploaded in a list format with a number order. There should be a view button/link to each file to view more details. There should be a delete button/link to remove the file. (10 points)
+Create a view page that will display all my files uploaded in a list format with a number order. There should be a view button/link to each file to view more details.
+There should be a delete button/link to remove the file. (10 points)
 
 On the file read page be sure to display the file size, the file type, date created and a link to the file directly. (10 points).
 

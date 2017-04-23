@@ -13,13 +13,13 @@
     <span class="nav-item">
         <a class="button" href="../lab/upload-form.php">
             <span class="icon">
-                <i class="fa fa-address-book" aria-hidden="true"></i>
+                <i class="fa fa-upload" aria-hidden="true"></i>
             </span>
             <span>Upload File</span>
         </a>
         <a class="button is-primary" href="../lab/file-display.php">
             <span class="icon">
-                <i class="fa fa-sign-in" aria-hidden="true"></i>
+                <i class="fa fa-files-o" aria-hidden="true"></i>
             </span>
             <span>Files</span>
         </a>
