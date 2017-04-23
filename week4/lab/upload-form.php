@@ -10,10 +10,11 @@
         <title></title>
     </head>
     <body>
-        <?php
-        include './autoload.php';
+        <?php       
+        require './autoload.php';
         include './views/navigation.html.php';
         include './views/upload.html.php';
+
 
         // initialize errors array
         $errors = [];

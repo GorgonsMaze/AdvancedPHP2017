@@ -7,12 +7,25 @@
         <link rel='stylesheet' type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
         <meta charset="UTF-8">
+        <style type="text/css">
+            .fa-eye, .fa-trash {
+                margin-right: 5px;
+            }
+        </style>
     </head>
     <body>
         <?php
         include './autoload.php';
         include './views/navigation.html.php';
         include './views/errors.html.php';
+
+        $fileDelete = filter_input(INPUT_GET, 'deleteFile');
+        if (is_string($fileDelete)) {
+            $file = '.' . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . $fileDelete;
+            if (is_file($file)) {
+                unlink($file);
+            }
+        }
 
         $folder = './uploads';
         if (!is_dir($folder)) {

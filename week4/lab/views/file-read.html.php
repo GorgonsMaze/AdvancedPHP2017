@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
-        
-        ?>
-    </body>
-</html>
+<figure class="image">
+    <?php echo $displayFile; ?>
+</figure>
