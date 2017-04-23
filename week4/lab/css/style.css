@@ -1,0 +1,16 @@
+/* 
+    Created on : Apr 22, 2017, 10:54:09 PM
+    Author     : ian
+*/
+
+.fa-eye, .fa-trash {
+    margin-right: 5px;
+}
+
+.card-content, #card-details {
+    background-color: #f7f7f7!important;
+}
+
+form {
+    margin-top: 20px;
+}
