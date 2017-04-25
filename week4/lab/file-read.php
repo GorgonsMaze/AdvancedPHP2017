@@ -17,8 +17,8 @@
         $file = '.' . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . $filename;
 
         //http://php.net/manual/en/fileinfo.constants.php
-        $finfo = new finfo(FILEINFO_MIME_TYPE);
-        $type = $finfo->file($file);
+        $fmimeinfo = new finfo(FILEINFO_MIME_TYPE);
+        $type = $fmimeinfo->file($file);
 
         // http://php.net/manual/en/class.splfileinfo.php
         $finfo = new SplFileInfo($file);
