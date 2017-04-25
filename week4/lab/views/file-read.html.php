@@ -12,6 +12,7 @@
                 <p><strong>File Type: </strong><?php echo $type; ?></p>
                 <p><strong>File Size: </strong><?php echo filesize($file) . " bytes"; ?></p>
                 <p><strong>Date Created: </strong><?php echo date("l F j, Y, g:i a", $finfo->getMTime()); ?></p>
+                <p><strong>Direct Link: </strong><a href="<?php echo $file; ?>"><?php echo $filename; ?></a></p>
             </div>
             <footer class="card-footer">
                 <p class="card-footer-item">
