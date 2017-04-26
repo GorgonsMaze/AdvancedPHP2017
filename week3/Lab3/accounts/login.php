@@ -19,8 +19,8 @@
         $accounts = new Accounts();
         $validator = new Validator();
         
-        $passedEmail = filter_input(INPUT_GET, 'email');
-        
+        // Used to pass the email user signed up with to the login page redirect else 
+        $passedEmail = filter_input(INPUT_POST, 'email') ? filter_input(INPUT_POST, 'email') : filter_input(INPUT_GET, 'email'); 
         $errors = [];
 
         $email = filter_input(INPUT_POST, 'email');
