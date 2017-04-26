@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * DB is the general class to connection to our database
+ *
+ * @author GForti
+ */
+
+
 class DB {
     
     protected $db = null;

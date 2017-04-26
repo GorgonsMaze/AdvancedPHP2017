@@ -21,17 +21,6 @@ try {
     // Data from form
     $serverData = $restServer->getServerData();
     
-    /*
-     * You can add resoruces that will be handled by the server 
-     * 
-     * There are clever ways to use advanced variables to sort of
-     * generalize the code below. That would also require that all
-     * resoruces follow the same standard. Interfaces can ensure that.
-     * 
-     * But in this example we will just code it out.
-     * 
-     */
-
     // Advanced Variables
     // set to lowercase before setting first character to uppercase
     $resourceUCName = ucfirst($resource);

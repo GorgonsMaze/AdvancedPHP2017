@@ -21,17 +21,6 @@ try {
     // Data from form
     $serverData = $restServer->getServerData();
     
-    /*
-     * You can add resoruces that will be handled by the server 
-     * 
-     * There are clever ways to use advanced variables to sort of
-     * generalize the code below. That would also require that all
-     * resoruces follow the same standard. Interfaces can ensure that.
-     * 
-     * But in this example we will just code it out.
-     * 
-     */
-
     // Advanced Variables
     // set to lowercase before setting first character to uppercase
     $resourceUCName = ucfirst($resource);
@@ -56,7 +45,6 @@ try {
 
     if ('POST' === $verb) {
 
-
         if ($resourceData->post($serverData)) {
             $restServer->setMessage($resourceUCName . ' Added');
             $restServer->setStatus(201);
@@ -70,6 +58,27 @@ try {
 
         if (NULL === $id) {
             throw new InvalidArgumentException($resourceUCName . ' ID ' . $id . ' was not found');
+        } else {
+            if ($resourceData->put($id, $serverData)) {
+                $restServer->setMessage($resourceUCName . ' Updated');
+                $restServer->setStatus(201);
+            } else {
+                throw new Exception($resourceUCName . ' could not be updated');
+            }
+        }
+    }
+
+    if ('DELETE' === $verb) {
+
+        if (NULL === $id) {
+            throw new InvalidArgumentException($resourceUCName . ' ID ' . $id . ' was not found');
+        } else {
+            if ($resourceData->delete($id)) {
+                $restServer->setMessage($resourceUCName . ' Deleted');
+                $restServer->setStatus(201);
+            } else {
+                throw new Exception($resourceUCName . ' could not be deleted');
+            }
         }
     }
 

@@ -3,9 +3,9 @@
 /**
  * Description of CorporationResource
  *
- * @author Ian Arsnault
+ * @author Ian Arsenault
  */
-class CorporationResource extends DBSpring implements IRestModel {
+class CorpResource extends DBSpring implements IRestModel {
 
     public function getAll() {
         $stmt = $this->getDb()->prepare("SELECT * FROM corps");
@@ -33,8 +33,8 @@ class CorporationResource extends DBSpring implements IRestModel {
         /* note you should validate before adding to the data base */
         $stmt = $this->getDb()->prepare("INSERT INTO corps SET corp = :corp, incorp_dt = :incorp_dt, email = :email, owner = :owner, phone = :phone, location = :location");
         $binds = array(
-            ":corp" => $serverData['fullname'],
-            "incorp_dt" => $serverData['incorp_dt'],
+            ":corp" => $serverData['corp'],
+            ":incorp_dt" => $serverData['incorp_dt'],
             ":email" => $serverData['email'],
             ":owner" => $serverData['owner'],
             ":phone" => $serverData['phone'],
@@ -47,10 +47,11 @@ class CorporationResource extends DBSpring implements IRestModel {
         return false;
     }
 
-    public function put($serverData) {
+    public function put($id, $serverData) {
         /* note you should validate before adding to the data base */
         $stmt = $this->getDb()->prepare("UPDATE corps SET corp = :corp, incorp_dt = :incorp_dt, email = :email, owner = :owner, phone = :phone, location = :location WHERE id = :id");
         $binds = array(
+            ":id" => $id,
             ":corp" => $serverData['fullname'],
             "incorp_dt" => $serverData['incorp_dt'],
             ":email" => $serverData['email'],
@@ -58,20 +59,19 @@ class CorporationResource extends DBSpring implements IRestModel {
             ":phone" => $serverData['phone'],
             ":location" => $serverData['location']
         );
-
         if ($stmt->execute($binds) && $stmt->rowCount() > 0) {
             return true;
         }
         return false;
     }
 
-    public function delete($serverData) {
+    public function delete($id) {
         $stmt = $this->getDb()->prepare("DELETE FROM corps WHERE id = :id LIMIT 1");
-         $binds = array(
-            ":id" => $serverData['id']
+        $binds = array(
+            ":id" => $id
         );
         // Testing execution of statement - 
-        if ($stmt->execute($binds)) {
+        if ($stmt->execute($binds) && $stmt->rowCount() > 0) {
             return true;
         }
         return false;
