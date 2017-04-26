@@ -4,7 +4,7 @@
         <form action="#" method="post"> 
             <div class="field">
                 <label class="label">Email</label>
-                <input class="input" name="email" type="text" value="" />
+                <input class="input" name="email" type="text" value="<?php echo $passedEmail; ?>" />
             </div>
             <div class="field">
                 <label class="label">Password</label>
