@@ -18,58 +18,64 @@
             }
         </style>
 
-        <p class="title is-1">Rest API Demo</p>
+        <p class="title is-1 has-text-centered">Rest API Demo</p>
 
         <br />
-        <div class="field">
-            <label class="label"> Verb/HTTP Method:</label>
-            <p class="control">
-                <span class="select">
-                    <select name="verb">
-                        <option value="GET">GET</option>
-                        <option value="POST">POST</option>
-                        <option value="PUT">PUT</option>
-                        <option value="DELETE">DELETE</option>
-                    </select>
-                </span>
-            </p>
+
+        <div class="columns">
+            <div class="column is-half-desktop is-offset-3">
+                <div class="field">
+                    <label class="label"> Verb/HTTP Method:</label>
+                    <p class="control">
+                        <span class="select">
+                            <select name="verb">
+                                <option value="GET">GET</option>
+                                <option value="POST">POST</option>
+                                <option value="PUT">PUT</option>
+                                <option value="DELETE">DELETE</option>
+                            </select>
+                        </span>
+                    </p>
+                </div>
+
+                <br />
+
+                <label class="label">Resource for endpoint:</label>
+                <input class="input" type="text" name="resource" value="corp" />
+
+                <br />
+                <br />  
+                <label class="label">Data(optional):</label>
+                <label class="label">Corporation</label>
+                <input class="input" type="text" type="text" name="corp" value="" />
+                <br />
+                <label class="label">incorp_dt</label>
+                <input class="input" type="text" type="date" name="incorp_dt" value="" />
+                <br />
+                <label class="label">email</label>
+                <input class="input" type="text" type="email" name="email" value="" />
+                <br />
+                <label class="label">owner</label>
+                <input class="input" type="text" type="text" name="owner" value="" />
+                <br />
+                <label class="label">phone</label>
+                <input class="input" type="text" type="text" name="phone" value="" />
+                <br />
+                <label class="label">location</label>
+
+                <input class="input" type="text" name="location" list="location" placeholder="Find U.S. State">
+
+
+                <br />
+                <br />
+                <br />
+                <button class="button is-info">Make Call</button>
+                <h3 class="title is-3">Results</h3>
+
+                <textarea name="results"></textarea>
+            </div>
         </div>
 
-        <br />
-
-        <label class="label">Resource for endpoint:</label>
-        <input class="input" type="text" name="resource" value="corp" />
-
-        <br />
-        <br />  
-        <label class="label">Data(optional):</label>
-        <label class="label">Corporation</label>
-        <input class="input" type="text" type="text" name="corp" value="" />
-        <br />
-        <label class="label">incorp_dt</label>
-        <input class="input" type="text" type="date" name="incorp_dt" value="" />
-        <br />
-        <label class="label">email</label>
-        <input class="input" type="text" type="email" name="email" value="" />
-        <br />
-        <label class="label">owner</label>
-        <input class="input" type="text" type="text" name="owner" value="" />
-        <br />
-        <label class="label">phone</label>
-        <input class="input" type="text" type="text" name="phone" value="" />
-        <br />
-        <label class="label">location</label>
-
-        <input class="input" type="text" name="location" list="location" placeholder="Find U.S. State">
-
-
-        <br />
-        <br />
-        <br />
-        <button class="button is-info">Make Call</button>
-        <h3 class="title is-3">Results</h3>
-
-        <textarea name="results"></textarea>
 
         <script type="text/javascript">
 
