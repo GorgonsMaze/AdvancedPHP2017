@@ -2,7 +2,9 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Rest API</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.min.css">
+        <link rel='stylesheet' type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     </head>
     <body>
         <style type="text/css">
@@ -16,38 +18,56 @@
             }
         </style>
 
-        <h1>Rest API Demo</h1>
+        <p class="title is-1">Rest API Demo</p>
 
-        Verb/HTTP Method:<br />
-        <select name="verb">
-            <option value="GET">GET</option>
-            <option value="POST">POST</option>
-            <option value="PUT">PUT</option>
-            <option value="DELETE">DELETE</option>
-        </select>
+        <br />
+        <div class="field">
+            <label class="label"> Verb/HTTP Method:</label>
+            <p class="control">
+                <span class="select">
+                    <select name="verb">
+                        <option value="GET">GET</option>
+                        <option value="POST">POST</option>
+                        <option value="PUT">PUT</option>
+                        <option value="DELETE">DELETE</option>
+                    </select>
+                </span>
+            </p>
+        </div>
+
+        <br />
+
+        <label class="label">Resource for endpoint:</label>
+        <input class="input" type="text" name="resource" value="corp" />
+
+        <br />
+        <br />  
+        <label class="label">Data(optional):</label>
+        <label class="label">Corporation</label>
+        <input class="input" type="text" type="text" name="corp" value="" />
+        <br />
+        <label class="label">incorp_dt</label>
+        <input class="input" type="text" type="date" name="incorp_dt" value="" />
+        <br />
+        <label class="label">email</label>
+        <input class="input" type="text" type="email" name="email" value="" />
+        <br />
+        <label class="label">owner</label>
+        <input class="input" type="text" type="text" name="owner" value="" />
+        <br />
+        <label class="label">phone</label>
+        <input class="input" type="text" type="text" name="phone" value="" />
+        <br />
+        <label class="label">location</label>
+
+        <input class="input" type="text" name="location" list="location" placeholder="Find U.S. State">
+
+
         <br />
         <br />
-        Resource for endpoint:<br />
-        <input name="resource" value="corp" />
         <br />
-        <br />
-        Data(optional):<br />   
-        Corporation <input type="text" name="corp" value="" />
-        <br />
-        incorp_dt <input type="date" name="incorp_dt" value="" />
-        <br />
-        email <input type="email" name="email" value="" />
-        <br />
-        owner <input type="text" name="owner" value="" />
-        <br />
-        phone <input type="text" name="phone" value="" />
-        <br />
-        location <input type="text" name="location" list="location" placeholder="Find U.S. State">
-        <br />
-        <br />
-        <br />
-        <button>Make Call</button>
-        <h3>Results</h3>
+        <button class="button is-info">Make Call</button>
+        <h3 class="title is-3">Results</h3>
 
         <textarea name="results"></textarea>
 
@@ -66,7 +86,7 @@
                     'owner': document.querySelector('input[name="owner"]').value,
                     'phone': document.querySelector('input[name="phone"]').value,
                     'location': document.querySelector('input[name="location"]').value
-                  
+
                 };
                 var results = document.querySelector('textarea[name="results"]');
 
