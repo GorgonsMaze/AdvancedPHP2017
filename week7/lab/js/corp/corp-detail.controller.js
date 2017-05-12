@@ -2,32 +2,34 @@
     
     'use strict';
     angular
-        .module('app.address')
-        .controller('AddressDetailController', AddressDetailController);
+        .module('app.corp')
+        .controller('CorpDetailController', CorpDetailController);
 
-    AddressDetailController.$inject = ['$routeParams','AddressService'];
+    CorpDetailController.$inject = ['$routeParams','CorpService'];
 
     /*
-     * This controller will find the details of an address from the address service.
+     * This controller will find the details of an corporation from the corp service.
      */
-    function AddressDetailController($routeParams, AddressService) {
+    function CorpDetailController($routeParams, CorpService) {
         var vm = this;
 
-        vm.address = {};
-        var addressID = $routeParams.addressId;
+        vm.corp = {};
+        var corpID = $routeParams.corpID;
+        var newLocation;
 
         activate();
 
         ////////////
 
         function activate() {
-            AddressService.getAddress(addressID).then(function (response) {
-                vm.address = response;
-                if (vm.address.hasOwnProperty('birthday')) {
-                    vm.address.birthday = new Date(vm.address.birthday);
+            CorpService.getCorp(corpID).then(function (response) {
+                vm.corp = response;
+                if (vm.corp.hasOwnProperty('location')) {
+                    newLocation = vm.corp.location; 
                 }
-                console.log(vm.address);                
-                loadMap('41.8239890,-71.4128340');
+                console.log(vm.corp); 
+                loadMap(newLocation);
+                //loadMap('41.8239890,-71.4128340');
             });
         }
                
