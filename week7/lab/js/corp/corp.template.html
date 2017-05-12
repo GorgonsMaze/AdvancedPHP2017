@@ -2,12 +2,12 @@
 
 <div class="content">
     
-    <h3>Search</h3>
+    <h3>Search: <input ng-model="searchText"></h3>
     <!-- https://docs.angularjs.org/api/ng/filter/filter -->
     <br />
     <br /> 
           
-    <table class="gridtable">
+    <table class="gridtable" id="searchTextResults">
         <thead>
             <tr>
                 <th>Corporation</th>
@@ -17,7 +17,7 @@
             </tr>
         </thead>    
         
-        <tr ng-repeat="corp in vm.corps">
+        <tr ng-repeat="corp in vm.corps | filter:searchText">
             <td>{{corp.corp}}</td>                  
             <td>{{corp.owner}}</td>
             <td><a ng-href="#/corp/{{corp.id}}">View</a></td>
