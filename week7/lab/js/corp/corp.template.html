@@ -1,27 +1,32 @@
-<h1>Corporation Table</h1>
+<h1 class="title is-2 has-text-centered">Corporation Table</h1>
 
-<div class="content">
-    
-    <h3>Search: <input ng-model="searchText"></h3>
-    <!-- https://docs.angularjs.org/api/ng/filter/filter -->
-    <br />
-    <br /> 
-          
-    <table class="gridtable" id="searchTextResults">
-        <thead>
-            <tr>
-                <th>Corporation</th>
-                <th>Owner</th>                
-                <th></th>
-        
+<div class="columns">
+    <div class="column is-8 is-offset-2">
+        <div class="column is-6 is-offset-3">
+              <h3 class="title is-5">Search: <input class="input" type="text" ng-model="searchText"></h3>
+        </div>
+      
+        <!-- https://docs.angularjs.org/api/ng/filter/filter -->
+        <br />
+        <br /> 
+
+        <table class="table is-narrow" id="searchTextResults">
+            <thead>
+                <tr>
+                    <th>Corporation</th>
+                    <th>Owner</th>                
+                    <th></th>
+
+                </tr>
+            </thead>    
+
+            <tr ng-repeat="corp in vm.corps| filter:searchText">
+                <td>{{corp.corp}}</td>                  
+                <td>{{corp.owner}}</td>
+                <td><a ng-href="#/corp/{{corp.id}}">View</a></td>
             </tr>
-        </thead>    
-        
-        <tr ng-repeat="corp in vm.corps | filter:searchText">
-            <td>{{corp.corp}}</td>                  
-            <td>{{corp.owner}}</td>
-            <td><a ng-href="#/corp/{{corp.id}}">View</a></td>
-        </tr>
-    </table>
-        
+        </table> 
+    </div>
+
+
 </div>
