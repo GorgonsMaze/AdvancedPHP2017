@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Angular JS - Sample App</title>
+        <title>Corporation App</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.min.css">
         <!-- https://developers.google.com/maps/documentation/geolocation/get-api-key -->
-        <script src="http://maps.googleapis.com/maps/api/js?key=[YOUR_API_KEY]"></script>
+        <script src="http://maps.googleapis.com/maps/api/js?key="></script>
     </head>
     <body ng-app="app">
-        <a href="#/corp">Corporations</a>
+        <div class="has-text-centered">
+            <a class="button" href="#/corp">Corporations</a>
+        </div>
         <div ng-view="" ng-cloak></div>
-        
+
         <script src="js/lib/angular.js" type="text/javascript"></script>
         <script src="js/lib/angular-route.js" type="text/javascript"></script>
         <script src="js/app.module.js" type="text/javascript"></script>     
@@ -20,5 +23,6 @@
         <script src="js/corp/corp.routes.js" type="text/javascript"></script>               
         <script src="js/corp/corp.controller.js" type="text/javascript"></script>   
         <script src="js/corp/corp.service.js" type="text/javascript"></script>    
+        <script src="js/corp/corp-detail.controller.js" type="text/javascript"></script>
     </body>
 </html>

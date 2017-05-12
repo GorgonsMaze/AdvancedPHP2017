@@ -19,17 +19,12 @@
                 controller: 'CorpController',
                 controllerAs: 'vm'
             }).
-            when('/corp/:corpId', {
+            when('/corp/:corpID', {
                 templateUrl: 'js/corp/corp-detail.template.html',
                 controller: 'CorpDetailController',
                 controllerAs: 'vm'
             });
-//                    .
-//            when('/address/delete/:addressId', {
-//                templateUrl: 'js/address/address-delete.template.html',
-//                controller: 'AddressDeleteController',
-//                controllerAs: 'vm'
-//            });
+
     }
 
 })();

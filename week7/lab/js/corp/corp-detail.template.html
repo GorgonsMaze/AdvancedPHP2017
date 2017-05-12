@@ -1,0 +1,38 @@
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title is-1 has-text-centered">
+        Corporation Details
+      </h1>
+    </div>
+  </div>
+</section>
+<!--<div class="content">
+    <p><strong>Corporation: </strong>{{vm.corp.corp| uppercase}}</p>
+    <p><strong>Owner</strong> {{ vm.corp.owner}}</p>
+    <p><strong>Incorporated On: </strong>{{vm.corp.incorp_dt| date:'longDate'}}</p>
+    <p><strong>Email: </strong><a ng-href="mailto:{{vm.corp.email}}">{{vm.corp.email}}</a></p>
+    <p><strong>Phone: </strong><a ng-href="tel:{{vm.corp.phone}}">{{vm.corp.phone}}</a></p>
+    <div class="googleMap"></div>
+    <p><a href="#/corp">Back</a></p>
+</div>
+-->
+
+<div class="columns">
+    <div class="column is-half is-offset-3">
+        <div class="card">
+            <div class="card-content">
+                <p><strong>Corporation: </strong>{{vm.corp.corp| uppercase}}</p>
+                <p><strong>Owner</strong> {{ vm.corp.owner}}</p>
+                <p><strong>Incorporated On: </strong>{{vm.corp.incorp_dt| date:'longDate'}}</p>
+                <p><strong>Email: </strong><a ng-href="mailto:{{vm.corp.email}}">{{vm.corp.email}}</a></p>
+                <p><strong>Phone: </strong><a ng-href="tel:{{vm.corp.phone}}">{{vm.corp.phone}}</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="googleMap"></div>
+<div class="has-text-centered">
+    <a class="button is-info" href="#/corp">Back</a>
+</div>
