@@ -8,7 +8,7 @@
     angular
         .module('app.corp')
         .constant('REQUEST', {
-            'Address' : '../../week5/lab/api/v1/corp'
+            'Corporation' : '../../week5/lab/api/v1/corp'
         });
         
 })();
