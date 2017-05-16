@@ -12,7 +12,7 @@
      */
     function CorpService($http, REQUEST) {
 
-        var url = REQUEST.Address;
+        var url = REQUEST.Corporation;
 
         var service = {
             'getAllCorps' : getAllCorps,
