@@ -52,7 +52,7 @@ class CorpResource extends DBSpring implements IRestModel {
         $stmt = $this->getDb()->prepare("UPDATE corps SET corp = :corp, incorp_dt = :incorp_dt, email = :email, owner = :owner, phone = :phone, location = :location WHERE id = :id");
         $binds = array(
             ":id" => $id,
-            ":corp" => $serverData['fullname'],
+            ":corp" => $serverData['corp'],
             "incorp_dt" => $serverData['incorp_dt'],
             ":email" => $serverData['email'],
             ":owner" => $serverData['owner'],
